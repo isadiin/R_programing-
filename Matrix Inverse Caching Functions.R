@@ -1,3 +1,4 @@
+#makeCacheMatrix
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   
@@ -42,6 +43,7 @@ cacheSolve(my_matrix)
 
 # Compute again (second time: retrieves cached data)
 cacheSolve(my_matrix)
+
 
 
 
