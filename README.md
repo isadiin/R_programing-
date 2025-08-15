@@ -46,6 +46,3 @@ cacheSolve(my_matrix)
 * This implementation assumes that all matrices supplied are **square and invertible**.
 * The caching mechanism improves efficiency for repeated inverse calculations on the same matrix.
 
----
-
-If you want, I can also **draft a very short 2–3 sentence version** that is perfect for peer grading—it makes your submission look clean and professional. Do you want me to do that?
