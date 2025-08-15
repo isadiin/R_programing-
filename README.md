@@ -1,53 +1,51 @@
-Cache Matrix Inversion in R
+Here’s a **concise README** you can include in your GitHub repo for this assignment:
 
-This repository contains R functions that cache the inverse of a matrix. Caching can save time when repeatedly computing the inverse of the same matrix, avoiding redundant calculations.
+---
 
-Functions
-1. makeCacheMatrix
+# Programming Assignment 2: Lexical Scoping in R
 
-This function creates a special “matrix” object that can store a matrix and cache its inverse. It returns a list of functions to:
+## Overview
 
-set(y): Set a new matrix y and clear the cached inverse.
+This repository contains the solution for the **Coursera R Programming Assignment 2**, which demonstrates **caching potentially time-consuming computations** in R using **lexical scoping**.
 
-get(): Retrieve the current matrix.
+The assignment focuses on creating a **special matrix object** that can cache its inverse, avoiding repeated costly computations.
 
-setinverse(inverse): Cache the inverse of the matrix.
+---
 
-getinverse(): Retrieve the cached inverse if it exists.
+## Files
 
-Example:
+* `cachematrix.R` — contains two functions:
 
-my_matrix <- makeCacheMatrix(matrix(c(1,2,3,4), 2, 2))
-my_matrix$get()  # Returns the stored matrix
+  1. `makeCacheMatrix`: Creates a special matrix object that can cache its inverse.
+  2. `cacheSolve`: Computes the inverse of the matrix. If the inverse has already been computed, it retrieves the cached value.
 
-2. cacheSolve
+---
 
-This function computes the inverse of the special “matrix” created by makeCacheMatrix. It checks if the inverse has already been calculated:
+## Usage
 
-If cached, it returns the cached inverse with a message "getting cached data".
+```r
+# Load the R script
+source("cachematrix.R")
 
-If not cached, it calculates the inverse, caches it, and returns the result.
+# Create a special matrix
+my_matrix <- makeCacheMatrix(matrix(c(2,1,1,2), 2, 2))
 
-Example:
-
-# Compute inverse (first time calculates)
+# Compute the inverse (first time: computes)
 cacheSolve(my_matrix)
 
-# Compute inverse again (retrieves cached data)
+# Retrieve cached inverse (second time: cached)
 cacheSolve(my_matrix)
+```
 
-Example Workflow
-# Create a special matrix object
-my_matrix <- makeCacheMatrix(matrix(c(1,2,3,4), 2, 2))
+**Expected behavior:** The first call calculates the inverse. The second call displays the message `"getting cached data"` and returns the cached inverse.
 
-# First computation (calculates inverse)
-inv1 <- cacheSolve(my_matrix)
+---
 
-# Second computation (uses cached inverse)
-inv2 <- cacheSolve(my_matrix)
+## Notes
 
+* This implementation assumes that all matrices supplied are **square and invertible**.
+* The caching mechanism improves efficiency for repeated inverse calculations on the same matrix.
 
-Output:
+---
 
-getting cached data  # Appears only during second retrieval
-
+If you want, I can also **draft a very short 2–3 sentence version** that is perfect for peer grading—it makes your submission look clean and professional. Do you want me to do that?
