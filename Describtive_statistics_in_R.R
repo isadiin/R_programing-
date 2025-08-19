@@ -2,7 +2,7 @@
 # 📂 Load Data
 # -----------------------------
 library(readxl)   # For reading Excel files
-df <- read_xlsx(Path of the excel file )
+df <- read_xlsx("C:/Users/mohad/OneDrive/Desktop/wage of gender.xlsx")
 
 # -----------------------------
 # 👀 Explore the Data
@@ -44,3 +44,4 @@ summarytools::descr(df$Wage)  # Full descriptive table (mean, SD, min, max, skew
 # -----------------------------
 library(rpivotTable)
 rpivotTable(df)   # Drag and drop Gender & Wage to explore data interactively
+
