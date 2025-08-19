@@ -2,7 +2,7 @@
 # 📂 Load Data
 # -----------------------------
 library(readxl)   # For reading Excel files
-df <- read_xlsx("C:/Users/mohad/OneDrive/Desktop/wage of gender.xlsx")
+df <- read_xlsx(Path of the excel file )
 
 # -----------------------------
 # 👀 Explore the Data
